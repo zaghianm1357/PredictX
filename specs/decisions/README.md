@@ -4,3 +4,4 @@
 
 - [ADR-0001 — چرخه عمر تعریف، وقوع و پیامد رفتار](ADR-0001-behavior-lifecycle.md)
 - [ADR-0002 — انتخاب Modular Monolith برای نسخه نخست](ADR-0002-modular-monolith.md)
+- [ADR-0003 — رویکرد File-first برای داده تحلیلی نسخه نخست](ADR-0003-file-first-data.md)

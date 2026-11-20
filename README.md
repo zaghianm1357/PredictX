@@ -15,18 +15,22 @@ PredictX در فاز نخست روی داده‌های XAUUSD متمرکز اس�
 ## وضعیت پروژه
 در حال طراحی پژوهشی؛ هنوز هیچ الگوی بازار تأیید یا استراتژی معاملاتی پیاده‌سازی نشده است.
 
-## معماری نسخه نخست
-سبک پیشنهادی: **Modular Monolith با Pipelineهای مرحله‌ای**. منطق دامنه از زیرساخت و رابط کاربری مستقل می‌ماند؛ انتخاب زبان، پایگاه داده، منبع داده و ابزارهای اجرایی تا بررسی نیازها باز است.
+## معماری و داده
+- سبک معماری نسخه نخست: Modular Monolith با Pipelineهای مرحله‌ای.
+- مدل داده: جداسازی Raw، Canonical و Research به‌همراه DatasetVersion و QualityReport.
+- قالب ذخیره‌سازی تحلیلی ستونی مانند Parquet صرفاً پیشنهاد اولیه است؛ انتخاب نهایی پس از بررسی منبع و benchmark انجام می‌شود.
 
 ## مستندات
 - [مشخصات پژوهش](specs/research/research-specification.md)
 - [معماری ماژولار](specs/architecture/modular-architecture.md)
+- [مدل داده و کیفیت](specs/data/data-model-and-quality.md)
 - [ADR-0001: چرخه عمر رفتار](specs/decisions/ADR-0001-behavior-lifecycle.md)
 - [ADR-0002: Modular Monolith](specs/decisions/ADR-0002-modular-monolith.md)
+- [ADR-0003: رویکرد File-first](specs/decisions/ADR-0003-file-first-data.md)
 - [نقشه راه](specs/roadmap.md)
 
 ## دامنه اولیه
-- دارایی آغازین: XAUUSD
+- دارایی آغازین: XAUUSD؛ نوع ابزار/ارائه‌دهنده هنوز مشخص نشده است.
 - منبع داده و منطقه زمانی: تعیین نشده؛ باید در قرارداد ورودی ثبت شوند.
 - تایم‌فریم‌ها و افق‌ها: پارامترهای نسخه‌بندی‌شده آزمایش.
 
